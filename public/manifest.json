@@ -1,0 +1,9 @@
+{
+  "name": "EduOffline Sincelejo - CECAR",
+  "short_name": "EduOffline",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f4f7f6",
+  "theme_color": "#005a8d",
+  "description": "Plataforma educativa con arquitectura Offline-First"
+}

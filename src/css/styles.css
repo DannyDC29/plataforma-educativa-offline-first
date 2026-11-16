@@ -1,0 +1,27 @@
+:root {
+  --primary: #005a8d;
+  --bg: #f0f4f8;
+  --card: #ffffff;
+  --text: #1e293b;
+  --success: #16a34a;
+  --warning: #d97706;
+}
+* { box-sizing: border-box; font-family: system-ui, -apple-system, sans-serif; }
+body { margin: 0; background: var(--bg); color: var(--text); }
+.topbar {
+  background: var(--primary); color: #fff; padding: 1rem 1.5rem;
+  display: flex; justify-content: space-between; align-items: center;
+}
+.topbar h1 { margin: 0; font-size: 1.25rem; }
+.badge { padding: 0.35rem 0.75rem; border-radius: 999px; font-weight: 600; font-size: 0.85rem; }
+.badge.online { background: var(--success); color: #fff; }
+.badge.offline { background: var(--warning); color: #fff; }
+.container { max-width: 900px; margin: 1.5rem auto; padding: 0 1rem; display: grid; gap: 1rem; }
+.card { background: var(--card); padding: 1.25rem; border-radius: 10px; box-shadow: 0 2px 6px rgba(0,0,0,0.08); }
+button {
+  background: var(--primary); color: #fff; border: none; padding: 0.6rem 1rem;
+  border-radius: 6px; cursor: pointer; font-weight: 600;
+}
+button:hover { opacity: 0.9; }
+button:disabled { background: #94a3b8; cursor: not-allowed; }
+input { padding: 0.55rem; border: 1px solid #cbd5e1; border-radius: 6px; width: 100%; margin-bottom: 0.75rem; }
