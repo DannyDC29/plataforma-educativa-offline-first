@@ -11,15 +11,43 @@
   <header class="topbar">
     <div>
       <h1>EduOffline Sincelejo</h1>
-      <small>Arquitectura Web Progresiva (Offline-First)</small>
+      <small>Arquitectura Web Progresiva (Offline-First) - CECAR</small>
     </div>
-    <div id="network-status" class="badge online">En línea</div>
+    <div style="display: flex; gap: 0.5rem; align-items: center;">
+      <span id="network-status" class="badge online">En línea</span>
+      <button id="toggle-network-btn" type="button" style="background:#0f172a; font-size:0.8rem;">
+        Simular Sin Red
+      </button>
+    </div>
   </header>
 
   <main id="app" class="container">
-    <section class="card">
-      <h2>Cargando entorno educativo...</h2>
-      <p>Estructura base lista para integración de módulos.</p>
+    <!-- Vista de Login (HU-01 y HU-02) -->
+    <section id="login-view" class="card">
+      <h2>Iniciar Sesión en la Plataforma</h2>
+      <p><small>Usuario de prueba: <strong>daniela@cecar.edu.co</strong> | Contraseña: <strong>123</strong></small></p>
+      <form id="login-form">
+        <label for="email">Correo institucional</label>
+        <input type="email" id="email" placeholder="daniela@cecar.edu.co" required />
+        <label for="password">Contraseña</label>
+        <input type="password" id="password" placeholder="123" required />
+        <button type="submit">Ingresar</button>
+      </form>
+      <p id="login-feedback" style="margin-top:0.75rem; font-weight:600;"></p>
+    </section>
+
+    <!-- Vista Principal del Estudiante (Dashboard) -->
+    <section id="dashboard-view" style="display: none;">
+      <div class="card" style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem;">
+        <div>
+          <strong id="student-welcome">Estudiante</strong>
+          <div id="session-mode-info" style="font-size:0.85rem; color:#475569;"></div>
+        </div>
+        <button id="logout-btn" type="button" style="background:#dc2626;">Cerrar sesión</button>
+      </div>
+
+      <div id="courses-container"></div>
+      <div id="sync-container" style="margin-top:1rem;"></div>
     </section>
   </main>
 
